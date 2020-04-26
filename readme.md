@@ -16,8 +16,8 @@
 app.js
 
         host: 'localhost',
-        user: 'root',
-        password : 'root',
+        user: 'userEHX',
+        password : 'hMmx56FN4GHpMXOl',
         port : 3306, //port mysql
         database:'sampledb'	
 
