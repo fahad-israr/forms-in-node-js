@@ -1,7 +1,7 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
-CREATE TABLE IF NOT EXISTS `customers` (
+CREATE TABLE IF NOT EXISTS `customer` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `ws_name` varchar(200) NOT NULL,
   `name` varchar(200) NOT NULL,
