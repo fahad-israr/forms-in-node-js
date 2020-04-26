@@ -60,6 +60,8 @@ app.post('/customers/add', customers.save);
 app.get('/customers/delete/:id', customers.delete_customer);
 app.get('/customers/edit/:id', customers.edit);
 app.post('/customers/edit/:id',customers.save_edit);
+app.post('/customers/view/:id',customers.view);
+
 
 
 app.use(app.router);

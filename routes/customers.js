@@ -3,6 +3,7 @@
  * GET users listing.
  */
 
+
 exports.list = function(req, res){
 
   req.getConnection(function(err,connection){
@@ -89,7 +90,7 @@ exports.save = function(req,res){
           if (err)
               console.log("Error inserting : %s ",err );
          
-          res.redirect('/customers');
+          res.redirect('/');
           
         });
         
