@@ -1,4 +1,4 @@
- A CRUD in Node.js n mySQL.
+ A CRUD for form in Node.js n mySQL.
 
 
 ## Installation
