@@ -12,8 +12,9 @@ exports.list = function(req, res){
             
             if(err)
                 console.log("Error Selecting : %s ",err );
-     
-            res.render('customers',{page_title:"Customers - Node.js",data:rows});
+                
+                console.log(rows);
+            res.render('customers',{page_title:"Attending Workshop",data:rows});
                 
            
          });
@@ -24,7 +25,7 @@ exports.list = function(req, res){
 };
 
 exports.add = function(req, res){
-  res.render('add_customer',{page_title:"Add Customers - Node.js"});
+  res.render('add_customer',{page_title:"Registration-Attending Workshop"});
 };
 
 exports.edit = function(req, res){
@@ -56,11 +57,29 @@ exports.save = function(req,res){
     req.getConnection(function (err, connection) {
         
         var data = {
-            
+
+            ws_name : input.ws_name,
             name    : input.name,
-            address : input.address,
+            gender  : input.gender,
             email   : input.email,
-            phone   : input.phone 
+            phone   : input.phone,
+            alt_phone: input.alt_phone,
+            designation: input.designation,
+            qualification : input.qualification,
+            department : input.department,
+            institute :input.institute,
+            address:input.address,
+            typeofinst: input.typeofinst,
+            subjects:input.subjects,
+            number:input.number,
+            teach:input.teach,
+            research:input.research,
+            industry:input.industry,
+            category: input.category,
+            lms: input.lms,
+            lms_info: input.lms_info,
+            exposure: input.exposure,
+            willing:input.willing
         
         };
         
@@ -88,10 +107,28 @@ exports.save_edit = function(req,res){
         
         var data = {
             
+            ws_name : input.ws_name,
             name    : input.name,
-            address : input.address,
+            gender  : input.gender,
             email   : input.email,
-            phone   : input.phone 
+            phone   : input.phone,
+            alt_phone: input.alt_phone,
+            designation: input.designation,
+            qualification : input.qualification,
+            department : input.department,
+            institute :input.institute,
+            address:input.address,
+            typeofinst: input.typeofinst,
+            subjects:input.subjects,
+            number:input.number,
+            teach:input.teach,
+            research:input.research,
+            industry:input.industry,
+            category: input.category,
+            lms: input.lms,
+            lms_info: input.lms_info,
+            exposure: input.exposure,
+            willing:input.willing
         
         };
         
