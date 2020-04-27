@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS `customer` (
    `institute` varchar(200) NOT NULL,
    `typeofinst` varchar(200) NOT NULL,
    `subjects` varchar(200) NOT NULL,
-   `number` varchar(200) NOT NULL,
+   `no_of_workshops` varchar(200) NOT NULL,
    `teach` varchar(200) NOT NULL,
    `research` varchar(200) NOT NULL,
    `industry` varchar(200) NOT NULL,
@@ -25,5 +25,9 @@ CREATE TABLE IF NOT EXISTS `customer` (
    `lms_info` varchar(200) NOT NULL,
    `exposure` varchar(200) NOT NULL,
    `willing` varchar(200) NOT NULL,
+    'has_computer' varchar(20) NOT NULL,
+    'has_internet' varchar(20) NOT NULL,
+    'has_webcam'   varchar(20) NOT NULL,
+    'has_mic'		 varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;

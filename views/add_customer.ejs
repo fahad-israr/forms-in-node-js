@@ -4,12 +4,37 @@
             
             <form method="post" action="/customers/add" onsubmit="window.scrollTo(0, 0);">
                 <table cellpadding="11">
+                  <tr>
+                     <td class="label" valign="top">Do you have Laptop or Desktop  to attend the virtual workshop</td><td valign="top">:<select type="text" name="has_computer" required style="background: #fff;width: 200px;height: 26px;">
+                         <option value="yes">Yes</option>
+                         <option value="no">No</option>
+                        </select></td>
+                 </tr>
+                 <tr>
+                     <td class="label" valign="top">Do you have Internet connectivity with decent bandwidth</td><td valign="top">:<select type="text" name="has_internet" required style="background: #fff;width: 200px;height: 26px;">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                        </select></td>
+                  </tr>
+               <tr>
+                  <td class="label" valign="top">Do you have a functional web-camera</td><td valign="top">:<select type="text" name="has_webcam" required style="background: #fff;width: 200px;height: 26px;">
+                     <option value="yes">Yes</option>
+                     <option value="no">No</option>
+                      </select></td>
+               </tr>
+             <tr>
+                     <td class="label" valign="top">Do you have a microphone and a headphone</td><td valign="top">:<select type="text" name="has_mic" required style="background: #fff;width: 200px;height: 26px;">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+               </select></td>
+             </tr>
                     <tr>
                         <td class="label">Workshop Date</td><td>: <select type="text" name="ws_name" required style="background: #fff;width: 200px;height: 26px;">
                            <option value="2-3 May 2020 ">2-3 May 2020 </option>
                            
                    </select></td>
                      </tr>
+               
                 <tr>
                     <td class="label">Name of Participant</td><td>: <input type="text" name="name" required></td>
                  </tr>
@@ -63,7 +88,7 @@
                     <td class="label">Subjects taught so far</td><td>: <input type="text" name="subjects" required></td>
                  </tr>
                  <tr>
-                    <td class="label">No. of refresher courses/workshops attended</td><td>: <input type="text" name="number" required></td>
+                    <td class="label">No. of refresher courses/workshops attended</td><td>: <input type="text" name="no_of_workshops" required></td>
                  </tr>
                  <tr>
                     <td class="label">Teaching Experience (in years):</td><td>: <input type="text" name="teach" required></td>

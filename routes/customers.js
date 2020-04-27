@@ -72,7 +72,7 @@ exports.save = function(req,res){
             address:input.address,
             typeofinst: input.typeofinst,
             subjects:input.subjects,
-            number:input.number,
+            no_of_workshops:input.no_of_workshops,
             teach:input.teach,
             research:input.research,
             industry:input.industry,
@@ -80,7 +80,11 @@ exports.save = function(req,res){
             lms: input.lms,
             lms_info: input.lms_info,
             exposure: input.exposure,
-            willing:input.willing
+            willing:input.willing,
+            has_computer:input.has_computer,
+            has_internet:input.has_internet,
+            has_webcam:input.has_webcam,
+            has_mic:input.has_mic
         
         };
         
@@ -121,7 +125,7 @@ exports.save_edit = function(req,res){
             address:input.address,
             typeofinst: input.typeofinst,
             subjects:input.subjects,
-            number:input.number,
+            no_of_workshops:input.no_of_workshops,
             teach:input.teach,
             research:input.research,
             industry:input.industry,
@@ -129,7 +133,11 @@ exports.save_edit = function(req,res){
             lms: input.lms,
             lms_info: input.lms_info,
             exposure: input.exposure,
-            willing:input.willing
+            willing:input.willing,
+            has_computer:input.has_computer,
+            has_internet:input.has_internet,
+            has_webcam:input.has_webcam,
+            has_mic:input.has_mic
         
         };
         
