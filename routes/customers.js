@@ -26,7 +26,7 @@ exports.list = function(req, res){
 };
 
 exports.add = function(req, res){
-  res.render('add_customer',{page_title:"Registration-Attending Workshop"});
+  res.render('add_customer',{page_title:"Workshop Registration"});
 };
 
 exports.edit = function(req, res){
