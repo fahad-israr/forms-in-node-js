@@ -11,6 +11,7 @@
 - `node app.js`
 - Running @`localhost:4300`
 - Navigate to `/customers`
+- If `/customers` nit working then go to `/customers/add`
 
 ## Configuration (database)
 app.js
