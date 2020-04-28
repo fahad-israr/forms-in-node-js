@@ -3,6 +3,20 @@
  * GET users listing.
  */
 
+//To enable you may need to enable less secure app for your account
+//For Gmail goto https://myaccount.google.com/lesssecureapps
+
+
+var nodemailer = require('nodemailer');
+
+var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'user@gmail.com',
+      pass: 'samplepassword'
+    }
+  });
+
 
 exports.list = function(req, res){
 
@@ -90,10 +104,25 @@ exports.save = function(req,res){
         
         var query = connection.query("INSERT INTO customer set ? ",data, function(err, rows)
         {
-  
+        
           if (err)
               console.log("Error inserting : %s ",err );
-         
+
+            var mailOptions = {
+            from: 'fahad00cms@gmail.com',
+            to: data.email,
+            subject: 'Welcome to Virtual Learning Academy',
+            text: 'This is some random text'
+            };
+            transporter.sendMail(mailOptions, function(error, info){
+                if (error) {
+                  console.log(error);
+                } else {
+                  console.log('Email sent: ' + info.response);
+                }
+              });
+
+              
           res.redirect('/');
           
         });
