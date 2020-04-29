@@ -2,7 +2,7 @@
 //For Gmail goto https://myaccount.google.com/lesssecureapps
 
 
-/*var nodemailer = require('nodemailer');
+var nodemailer = require('nodemailer');
 
 var transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -10,7 +10,7 @@ var transporter = nodemailer.createTransport({
       user: 'user@gmail.com',
       pass: 'samplepassword'
     }
-  });*/
+  });
 
 
 exports.list = function(req, res){
@@ -101,7 +101,7 @@ exports.list = function(req, res){
             if (err)
                 console.log("Error inserting : %s ",err );
   
-              /*var mailOptions = {
+              var mailOptions = {
               from: 'fahad00cms@gmail.com',
               to: data.email,
               subject: 'Welcome to Virtual Learning Academy',
@@ -113,7 +113,7 @@ exports.list = function(req, res){
                   } else {
                     console.log('Email sent: ' + info.response);
                   }
-                });*/
+                });
   
                 
             res.redirect('/');
