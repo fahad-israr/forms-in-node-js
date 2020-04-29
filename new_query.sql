@@ -31,3 +31,20 @@ CREATE TABLE IF NOT EXISTS `customer` (
     'has_mic'		 varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+
+CREATE TABLE IF NOT EXISTS `workshop` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ws_name` varchar(200) NOT NULL,
+  `start_date` varchar(200) NOT NULL,
+  `end_date` varchar(200) NOT NULL,
+  `coordinator` varchar(200) NOT NULL,
+  `gender` varchar(200) NOT NULL,
+  `address` text NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `mobile` varchar(20) NOT NULL,
+  `department` varchar(200) NOT NULL,
+  `institute` varchar(200) NOT NULL,
+   
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+

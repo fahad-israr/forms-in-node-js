@@ -10,6 +10,7 @@ var path = require('path');
 
 //load customers route
 var customers = require('./routes/customers'); 
+var workshops= require('./routes/workshops');
 var app = express();
 
 var connection  = require('express-myconnection'); 
@@ -61,8 +62,11 @@ app.post('/customers/add', customers.save);
 //app.get('/customers/edit/:id', customers.edit);
 //app.post('/customers/edit/:id',customers.save_edit);
 //app.post('/customers/view/:id',customers.view);
-
-
+app.get('/workshops/add',workshops.add);
+app.post('/workshops/add',workshops.save);
+//app.get('/workshops/delete/:id', workshops.delete_customer);
+//app.get('/workshops/edit/:id', workshops.edit);
+//app.post('/workshops/edit/:id',workshops.save_edit);
 
 app.use(app.router);
 
