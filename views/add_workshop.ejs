@@ -1,4 +1,21 @@
 <%- include layouts/header.ejs %>
+<script>
+   console.log("Add Workshop Form");
+
+   regef=function(value){
+      console.log(value);
+      document.getElementById("registrationfees").innerHTML= value=="SC/ST"?"₹ 250 /-":"₹ 500 /-";
+      if(value=="SC/ST"){
+         console.log("final test")
+         document.getElementById("category_certificate").disabled=false;
+      }else{
+         document.getElementById("category_certificate").disabled=true;
+      }
+      
+   }
+   
+</script>
+
 
         <div class="page-data">
             
@@ -33,7 +50,7 @@
 
 
                 <tr>
-                    <td class="label">Email ID</td><td>: <input type="text" name="email" required></td>
+                    <td class="label">Email ID</td><td>: <input type="text" id="fname" name="email" required></td>
                  </tr>
 
 
@@ -46,7 +63,22 @@
                  <tr>
                     <td class="label">Address</td><td>:  <textarea name="address" required cols="30" rows="5"></textarea></td>
                  </tr>
-                 
+                 <tr>
+                  <td class="label" valign="top">Category</td><td valign="top">: <select type="text" name="category" id="category" onchange="regef(this.value )" required style="background: #fff;width: 200px;height: 26px;">
+                      <option value="General">General</option>
+                      <option value="OBC">OBC</option>
+                      <option value="SC/ST">SC/ST</option>
+                   </select></td>
+                </tr>
+                <tr>
+                  <td class="label">Category certificate(only incase of SC/ST)</td><td>: <input type="file" id="category_certificate" disabled name="category_certificate" ></td>
+               </tr>
+               <tr>
+                  <td class="label">Registration Fees to be paid</td><td id="registrationfees" style="font-weight: bold;">:₹ 500 /-</td>
+               </tr>
+               <tr>
+                  <td class="label">Upload Transaction Receipt</td><td>: <input type="file" name="transaction_receipt" ></td>
+               </tr>
                     <td class="label"></td>
                     <td>
                         &nbsp; <input type="submit" name="submit" value="Submit">
