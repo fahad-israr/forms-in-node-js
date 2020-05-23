@@ -46,7 +46,7 @@ app.use(
         user: 'userEHX',
         password : 'hMmx56FN4GHpMXOl',
         port : 3306, //port mysql
-        database:'sampledb'
+        database:'sampledb',
 
     },'pool') //or single
 
