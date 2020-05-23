@@ -92,7 +92,10 @@ exports.list = function(req, res){
              department : input.department,
              institute : input.institute,
              address : input.address,
-          
+             participated_before:input.participated_before,
+             category : input.category,
+             category_certificate : input.category_certificate,
+             transaction_receipt : input.transaction_receipt
           };
           
           var query = connection.query("INSERT INTO workshop set ? ",data, function(err, rows)
@@ -134,7 +137,7 @@ exports.list = function(req, res){
           
             var data = {
     
-                ws_name : input.ws_name,
+            ws_name : input.ws_name,
             start_date : convertDate(input.start_date),
             end_date : convertDate(input.end_date),
             coordinator : input.coordinator,
@@ -144,7 +147,10 @@ exports.list = function(req, res){
             dept : input.dept,
             institute : input.institute,
             address : input.address,
-            
+            participated_before:input.participated_before,
+            category : input.category,
+            category_certificate : input.category_certificate,
+            transaction_receipt : input.transaction_receipt
             };
         
           

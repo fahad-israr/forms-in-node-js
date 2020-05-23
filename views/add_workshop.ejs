@@ -1,7 +1,6 @@
 <%- include layouts/header.ejs %>
 <script>
    console.log("Add Workshop Form");
-
    regef=function(value){
       console.log(value);
       document.getElementById("registrationfees").innerHTML= value=="SC/ST"?"₹ 250 /-":"₹ 500 /-";
@@ -63,6 +62,13 @@
                  <tr>
                     <td class="label">Address</td><td>:  <textarea name="address" required cols="30" rows="5"></textarea></td>
                  </tr>
+                 <tr>
+                  <td class="label">Have you Participated before ?</td><td>:
+                       <select type="text" name="participated_before" required style="background: #fff;width: 200px;height: 26px;">
+                           <option value="Yes">Yes</option>
+                           <option value="No">No</option>
+                   </select></td>
+               </tr>
                  <tr>
                   <td class="label" valign="top">Category</td><td valign="top">: <select type="text" name="category" id="category" onchange="regef(this.value )" required style="background: #fff;width: 200px;height: 26px;">
                       <option value="General">General</option>

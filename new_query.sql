@@ -44,7 +44,10 @@ CREATE TABLE IF NOT EXISTS `workshop` (
   `mobile` varchar(20) NOT NULL,
   `department` varchar(200) NOT NULL,
   `institute` varchar(200) NOT NULL,
-   
+  `participated_before` varchar(200) NOT NULL,
+  `category` varchar(200) NOT NULL,
+  `category_certificate` MEDIUMBLOB NOT NULL,
+  `transaction_receipt` MEDIUMBLOB NOT NULL 
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
