@@ -3,50 +3,73 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
   </head>
     <style>
-      body {
-        text-align: center;
-        padding: 40px 0;
-        background: #fff;
+        /* Set height to 100% for body and html to enable the background image to cover the whole page: */
+      body, html {
+        height: 100%;
+        margin: 0;
       }
-        h1 {
-          color: #88B04B;
-          font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
-          font-weight: 900;
-          font-size: 40px;
-          margin-bottom: 10px;
-        }
-        p {
-          color: #404F5E;
-          font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
-          font-size:20px;
-          margin: 0;
-        }
-      i {
-        color: #9ABC66;
-        font-size: 100px;
-        line-height: 200px;
-        margin-left:-15px;
+
+      .bgimg {
+        /* Background image */
+        background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');
+        /* Full-screen */
+        height: 100%;
+        /* Center the background image */
+        background-position: center;
+        /* Scale and zoom in the image */
+        background-size: cover;
+        /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+        position: relative;
+        /* Add a white text color to all elements inside the .bgimg container */
+        color: white;
+        /* Add a font */
+        font-family: "Courier New", Courier, monospace;
+        /* Set the font-size to 25 pixels */
+        font-size: 25px;
       }
-      .card {
-        position:absolute;
+
+      /* Position text in the top-left corner */
+      .topleft {
+        position: absolute;
+        top: 0;
+        left: 16px;
+      }
+
+      /* Position text in the bottom-left corner */
+      .bottomleft {
+        position: absolute;
         bottom: 0;
-        left: 0;
-        right: 0;
-        background: white;
-        padding: 60px;
-        border-radius: 4px;
-        box-shadow: 0 2px 3px #C8D0D8;
-        display: inline-block;
-        margin: 0 auto;
+        left: 16px;
+      }
+
+      /* Position text in the middle */
+      .middle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      /* Style the <hr> element */
+      hr {
+        margin: auto;
+        width: 40%;
       }
     </style>
     <body>
-      <div class="card">
-      <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
-        <i class="checkmark">✓</i>
-      </div>
-        <h1>Success</h1> 
-        <p>Thank You!!!!<br/> Your Form has been submitted Successfully!</p>
+      <div class="bgimg">
+        <div class="topleft">
+          <p>Virtual Learning Academy</p>
+        </div>
+        <div class="middle">
+          <h1>VLA Registration Portal</h1>
+          <hr>
+          <p>IIIT Trichy</p>
+        </div>
+        <div class="bottomleft">
+          <p><a href="https://iiitt.ac.in/vla" style="color:#fff;text-decoration: none;">iiitt.ac.in/vla</a></p>
+        </div>
       </div>
     </body>
 </html>
