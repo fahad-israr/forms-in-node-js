@@ -112,6 +112,7 @@ exports.save = function(req,res){
         
           if (err)
               console.log("Error inserting : %s ",err );
+              else{
 
             /*var mailOptions = {
             from: 'fahad00cms@gmail.com',
@@ -129,6 +130,7 @@ exports.save = function(req,res){
 
               
           res.redirect('/');
+            }
           
         });
         
