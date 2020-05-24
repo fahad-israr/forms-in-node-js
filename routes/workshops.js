@@ -77,7 +77,7 @@ exports.list = function(req, res){
       
       req.getConnection(function (err, connection) {
         if (err) throw err;
-        
+        console.log(input)
        
           
           var data = {
@@ -114,7 +114,7 @@ exports.list = function(req, res){
             if (err)
                 console.log("Error inserting : %s ",err );
   
-              var mailOptions = {
+              /*var mailOptions = {
               from: 'fahad00cms@gmail.com',
               to: data.email,
               subject: 'Welcome to Virtual Learning Academy',
@@ -126,7 +126,7 @@ exports.list = function(req, res){
                   } else {
                     console.log('Email sent: ' + info.response);
                   }
-                });
+                });*/
   
                 
             res.redirect('/');
