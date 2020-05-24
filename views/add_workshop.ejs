@@ -4,12 +4,19 @@
    vla_attended=function(value){
       console.log(value);
    
-   
+   if(value=="Yes"){
    let vla_attended=document.getElementsByClassName("attended_before");
    var i;
    for(i=0;i<vla_attended.length;i++)
     vla_attended[i].style.display = 'table-row ' ;
-   
+   }
+   else{
+      let vla_attended=document.getElementsByClassName("attended_before");
+      var i;
+      for(i=0;i<vla_attended.length;i++)
+      vla_attended[i].style.display = 'none' ;
+
+   }
     
       
       
