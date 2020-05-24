@@ -81,21 +81,31 @@ exports.list = function(req, res){
        
           
           var data = {
-  
-              ws_name : input.ws_name,
-             start_date : convertDate(input.start_date),
-             end_date : convertDate(input.end_date),
-             coordinator : input.coordinator,
-             gender : input.gender,
-             mobile : input.mobile,
-             email : input.email,
-             department : input.department,
-             institute : input.institute,
-             address : input.address,
-             participated_before:input.participated_before,
-             category : input.category,
-             category_certificate : input.category_certificate,
-             transaction_receipt : input.transaction_receipt
+            
+            institute : input.institute,
+            address : input.address,
+            ws_name : input.ws_name,
+            start_date_a : convertDate(input.start_date_a),
+            end_date_a : convertDate(input.end_date_a),
+            start_date_b : convertDate(input.start_date_b),
+            end_date_b : convertDate(input.end_date_b),
+            start_date_c : convertDate(input.start_date_c),
+            end_date_c : convertDate(input.end_date_c),
+            accept_guidelines: input.accept_guidelines,
+            coordinator : input.coordinator,
+            designation: input.designation,
+            department : input.department,
+            mobile : input.mobile,
+            email : input.email,
+            attended_before: input.attended_before,
+            attended_ws_name: input.attended_ws_name,
+            atteded_start_date: input.atteded_start_date,
+            attended_end_date: input.attended_end_date,
+            attended_submit_assignment:input.attended_submit_assignment
+             
+             
+             
+             
           };
           
           var query = connection.query("INSERT INTO workshop set ? ",data, function(err, rows)
@@ -137,20 +147,26 @@ exports.list = function(req, res){
           
             var data = {
     
-            ws_name : input.ws_name,
-            start_date : convertDate(input.start_date),
-            end_date : convertDate(input.end_date),
-            coordinator : input.coordinator,
-            gender : input.gender,
-            mobile : input.mobile,
-            email : input.email,
-            dept : input.dept,
-            institute : input.institute,
-            address : input.address,
-            participated_before:input.participated_before,
-            category : input.category,
-            category_certificate : input.category_certificate,
-            transaction_receipt : input.transaction_receipt
+              institute : input.institute,
+              address : input.address,
+              ws_name : input.ws_name,
+              start_date_a : convertDate(input.start_date_a),
+              end_date_a : convertDate(input.end_date_a),
+              start_date_b : convertDate(input.start_date_b),
+              end_date_b : convertDate(input.end_date_b),
+              start_date_c : convertDate(input.start_date_c),
+              end_date_c : convertDate(input.end_date_c),
+              accept_guidelines: input.accept_guidelines,
+              coordinator : input.coordinator,
+              designation: input.designation,
+              department : input.department,
+              mobile : input.mobile,
+              email : input.email,
+              attended_before: input.attended_before,
+              attended_ws_name: input.attended_ws_name,
+              atteded_start_date: input.atteded_start_date,
+              attended_end_date: input.attended_end_date,
+              attended_submit_assignment:input.attended_submit_assignment
             };
         
           

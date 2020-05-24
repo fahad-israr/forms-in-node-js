@@ -12,25 +12,30 @@ CREATE TABLE IF NOT EXISTS `customer` (
   `alt_phone` varchar(20) NOT NULL,
   `designation` varchar(200) NOT NULL,
   `qualification` varchar(200) NOT NULL,
-   `department` varchar(200) NOT NULL,
-   `institute` varchar(200) NOT NULL,
-   `typeofinst` varchar(200) NOT NULL,
-   `subjects` varchar(200) NOT NULL,
-   `no_of_workshops` varchar(200) NOT NULL,
-   `teach` varchar(200) NOT NULL,
-   `research` varchar(200) NOT NULL,
-   `industry` varchar(200) NOT NULL,
-   `category` varchar(200) NOT NULL,
-   `lms` varchar(200) NOT NULL,
-   `lms_info` varchar(200) NOT NULL,
-   `exposure` varchar(200) NOT NULL,
-   `willing` varchar(200) NOT NULL,
-    'has_computer' varchar(20) NOT NULL,
-    'has_internet' varchar(20) NOT NULL,
-    'has_webcam'   varchar(20) NOT NULL,
-    'has_mic'		 varchar(20) NOT NULL,
+  `department` varchar(200) NOT NULL,
+  `institute` varchar(200) NOT NULL,
+  `typeofinst` varchar(200) NOT NULL,
+  `subjects` varchar(200) NOT NULL,
+  `no_of_workshops` varchar(200) NOT NULL,
+  `teach` varchar(200) NOT NULL,
+  `research` varchar(200) NOT NULL,
+  `industry` varchar(200) NOT NULL,
+  `category` varchar(200) NOT NULL,
+  `lms` varchar(200) NOT NULL,
+  `lms_info` varchar(200) NOT NULL,
+  `exposure` varchar(200) NOT NULL,
+  `willing` varchar(200) NOT NULL,
+  `has_computer` varchar(20) NOT NULL,
+  `has_internet` varchar(20) NOT NULL,
+  `has_webcam`   varchar(20) NOT NULL,
+  `has_mic`		 varchar(20) NOT NULL,
+   `category_certificate` MEDIUMBLOB ,
+   `transaction_receipt` MEDIUMBLOB NOT NULL,
+    `amount_paid`  varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+
+
 
 CREATE TABLE IF NOT EXISTS `workshop` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -45,9 +50,7 @@ CREATE TABLE IF NOT EXISTS `workshop` (
   `department` varchar(200) NOT NULL,
   `institute` varchar(200) NOT NULL,
   `participated_before` varchar(200) NOT NULL,
-  `category` varchar(200) NOT NULL,
-  `category_certificate` MEDIUMBLOB NOT NULL,
-  `transaction_receipt` MEDIUMBLOB NOT NULL ,
+  
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 

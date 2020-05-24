@@ -7,50 +7,66 @@
             <form method="post" action="/workshops/add" ">
                 <table cellpadding="11">
                 
-                 
+                  <tr>
+                     <td class="label">Institute Name</td><td> <input type="text" name="institute" required></td>
+                  </tr>
+                  <tr>
+                     <td class="label">Institute Address</td><td>  <textarea name="address" required cols="30" rows="5"></textarea></td>
+                  </tr>
+                  </tr>
+                     <td class="label">Workshop Name</td><td> <input type="text" name="ws_name" required></td>
+                  </tr>
+                  <tr><td class="label"> Preferable dates of workshop</td><td>(Provide three possible options in order of preference):</td></tr>
+                  <tr><td class="label">1. First preference:</td></tr>
+                  <tr>
+                     <td class="label">Start Date</td><td>: <input type="date" name="start_date_a" required></td>
+                  </tr>
+                  <tr>
+                     <td class="label">End Date</td><td>: <input type="date" name="end_date_a" required></td>
+                  </tr>
                 <tr>
-                    <td class="label">Workshop Name</td><td>: <input type="text" name="ws_name" required></td>
-                 </tr>
-                 <tr>
-                    <td class="label">Start Date</td><td>: <input type="date" name="start_date" required></td>
-                 </tr>
-                 <tr>
-                    <td class="label">End Date</td><td>: <input type="date" name="end_date" required></td>
-                 </tr>
-                 <tr>
-                    <td class="label">Coordinator Name</td><td>: <input type="text" name="coordinator" required></td>
-                 </tr>
-
-                 <tr>
-                    <td class="label">Gender</td><td>:
-                         <select type="text" name="gender" required style="background: #fff;width: 200px;height: 26px;">
-                             <option value="M">Male</option>
-                             <option value="F">Female</option>
-                             <option value="O">Other</option>
-                     </select></td>
-                 </tr>
-                 <tr>
-                    <td class="label">Mobile Number</td><td>: <input type="number" name="mobile" style="width: 300px;height: 24px;" required></td>
-                 </tr>
-
-
+                  <tr><td class="label">2. Second preference:</td></tr>
+                  <tr>
+                     <td class="label">Start Date</td><td>: <input type="date" name="start_date_b" required></td>
+                  </tr>
+                  <tr>
+                     <td class="label">End Date</td><td>: <input type="date" name="end_date_b" required></td>
+                  </tr>
                 <tr>
-                    <td class="label">Email ID</td><td>: <input type="text" id="fname" name="email" required></td>
-                 </tr>
-
-
+                  <tr><td class="label">3. Third preference:</td></tr>
+                  <tr>
+                     <td class="label">Start Date</td><td>: <input type="date" name="start_date_c" required></td>
+                  </tr>
+                  <tr>
+                     <td class="label">End Date</td><td>: <input type="date" name="end_date_c" required></td>
+                  </tr>
+                <tr>
+                  <td class="label">Do you accept all guidelines listed above?</td><td>:
+                     <select type="text" name="accept_guidelines" required style="background: #fff;width: 200px;height: 26px;">
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
+                         
+                 </select></td>
+                 <tr><td class="label"># Host Coordinator Details:</td><td></td></tr>
                  <tr>
-                    <td class="label">Department</td><td>: <input type="text" name="department" required></td>
-                 </tr>
+                  <td class="label">Coordinator Name</td><td> <input type="text" name="coordinator" required></td>
+               </tr>
+               <tr>
+                  <td class="label">Designation</td><td> <input type="text" name="designation" required></td>
+               </tr>
+               <tr>
+                  <td class="label">Department</td><td> <input type="text" name="department" required></td>
+               </tr>
+               <tr>
+                  <td class="label">Email ID</td><td> <input type="text" name="email" required></td>
+               </tr>
+               <tr>
+                  <td class="label">Mobile Number</td><td> <input type="number" name="mobile" style="width: 300px;height: 24px;" required></td>
+               </tr>    
+ 
                  <tr>
-                    <td class="label">Institute Name</td><td>: <input type="text" name="institute" required></td>
-                 </tr>
-                 <tr>
-                    <td class="label">Address</td><td>:  <textarea name="address" required cols="30" rows="5"></textarea></td>
-                 </tr>
-                 <tr>
-                  <td class="label">Have you Participated before ?</td><td>:
-                       <select type="text" name="participated_before" required style="background: #fff;width: 200px;height: 26px;">
+                  <td class="label">Have you attended workshop organized by VLA Earlier?</td><td>:
+                       <select type="text" name="attended_before" required style="background: #fff;width: 200px;height: 26px;">
                           <option value="No">No</option>
                           <option value="Yes">Yes</option>
                            
