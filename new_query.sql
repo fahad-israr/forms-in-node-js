@@ -29,9 +29,11 @@ CREATE TABLE IF NOT EXISTS `customer` (
   `has_internet` varchar(20) NOT NULL,
   `has_webcam`   varchar(20) NOT NULL,
   `has_mic`		 varchar(20) NOT NULL,
-   `category_certificate` MEDIUMBLOB ,
-   `transaction_receipt` MEDIUMBLOB NOT NULL,
-    `amount_paid`  varchar(100) NOT NULL,
+  `category_certificate` varchar(200) ,
+  `transaction_reference_number` varchar(200) ,
+  `transaction_date` varchar(200),
+  `transaction_mode` varchar(200),
+  `amount_paid`  varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
