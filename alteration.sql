@@ -5,9 +5,11 @@ use sampledb
 
 
 ALTER TABLE customer
-	ADD category_certificate MEDIUMBLOB,
-    ADD transaction_receipt MEDIUMBLOB NOT NULL,
-    ADD amount_paid  varchar(100) NOT NULL;
+  ADD category_certificate varchar(200),
+  ADD transaction_reference_number varchar(200),
+  ADD transaction_date varchar(200),
+  ADD transaction_mode varchar(200),
+  ADD amount_paid  varchar(100) NOT NULL;
 
 
 -----------------------------------------------------------
