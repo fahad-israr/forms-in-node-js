@@ -131,7 +131,7 @@ exports.save = function(req,res){
               });*/
 
               
-          res.redirect('/');
+          res.redirect('/success');
             }
           
         });
