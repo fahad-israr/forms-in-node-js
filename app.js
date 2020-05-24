@@ -8,7 +8,7 @@ var routes = require('./routes');
 var http = require('http');
 var path = require('path');
 
-//load customers route
+//load participants route
 var participants = require('./routes/participants'); 
 var workshops= require('./routes/workshops');
 var fail=require('./routes/fail');
@@ -59,13 +59,13 @@ app.use(
 app.get('/', routes.index);
 app.get('/fail',fail.index);
 app.get('/success',success.index);
-//app.get('/customers', customers.list);
+//app.get('/participants', participants.list);
 app.get('/participants/add', participants.add);
 app.post('/participants/add', participants.save);
-//app.get('/customers/delete/:id', customers.delete_customer);
-//app.get('/customers/edit/:id', customers.edit);
-//app.post('/customers/edit/:id',customers.save_edit);
-//app.post('/customers/view/:id',customers.view);
+//app.get('/participants/delete/:id', participants.delete_participant);
+//app.get('/participants/edit/:id', participants.edit);
+//app.post('/participants/edit/:id',participants.save_edit);
+//app.post('/participants/view/:id',participants.view);
 app.get('/workshops/add',workshops.add);
 app.post('/workshops/add',workshops.save);
 //app.get('/workshops/delete/:id', workshops.delete_customer);

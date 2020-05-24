@@ -55,7 +55,7 @@ exports.edit = function(req, res){
             if(err)
                 console.log("Error Selecting : %s ",err );
      
-            res.render('edit_customer',{page_title:"Edit Customers - Node.js",data:rows});
+            res.render('edit_participant',{page_title:"Edit Customers - Node.js",data:rows});
                 
            
          });
@@ -196,7 +196,7 @@ exports.save_edit = function(req,res){
 };
 
 
-exports.delete_customer = function(req,res){
+exports.delete_participant = function(req,res){
           
      var id = req.params.id;
     
