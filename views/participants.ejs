@@ -13,7 +13,7 @@
                     <th>Address</th>
                     <th>Phone</th>
                     <th>Email</th>
-                    <th>Transaction Receipt</th>
+                    <th>Category Certificate</th>
                     <th width="120px">Action</th>
                 </tr>
                                
@@ -28,11 +28,11 @@
                     <td><%=data[i].address%></td>
                     <td><%=data[i].phone%></td>
                     <td><%=data[i].email%></td>
-                    <td><img src="<%=data[i].transaction_receipt%>"></td>
+                    <td><img src="/public/uploads/<%=data[i].category_certificate%>"></td>
                     <td>
-                        <a class="a-inside edit" href="../customers/edit/<%=data[i].id%>">Edit</a>
+                        <a class="a-inside edit" href="../participants/edit/<%=data[i].id%>">Edit</a>
                        
-                        <a class="a-inside delete" href="../customers/delete/<%=data[i].id%>">Delete</a>
+                        <a class="a-inside delete" href="../participants/delete/<%=data[i].id%>">Delete</a>
                         
                     </td>
                 </tr>

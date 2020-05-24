@@ -1,8 +1,8 @@
 function addUser(){
             
-    window.location.href = '/customers/add';
+    window.location.href = '/participants/add';
 }
 function cancelAdd(){
     
-    window.location.href = '/customers';
+    window.location.href = '/';
 }

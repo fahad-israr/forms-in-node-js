@@ -81,7 +81,7 @@ return [p[2],p[1],p[0] ].join("-")
 app.get('/', routes.index);
 app.get('/fail',fail.index);
 app.get('/success',success.index);
-app.get('/participants', participants.list);
+//app.get('/participants', participants.list);
 app.get('/participants/add', participants.add);
 app.post('/participants/add', participants.save);
 //app.get('/participants/delete/:id', participants.delete_participant);
