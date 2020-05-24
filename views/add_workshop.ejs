@@ -1,5 +1,21 @@
 <%- include layouts/header.ejs %>
-
+<script>
+   console.log("Add Workshop Form");
+   vla_attended=function(value){
+      console.log(value);
+   
+   
+   let vla_attended=document.getElementsByClassName("attended_before");
+   var i;
+   for(i=0;i<vla_attended.length;i++)
+    vla_attended[i].style.display = 'table-row ' ;
+   
+    
+      
+      
+   }
+   
+</script>
 
 
         <div class="page-data">
@@ -13,9 +29,10 @@
                   <tr>
                      <td class="label">Institute Address</td><td>  <textarea name="address" required cols="30" rows="5"></textarea></td>
                   </tr>
-                  </tr>
+                  <tr>
                      <td class="label">Workshop Name</td><td> <input type="text" name="ws_name" required></td>
                   </tr>
+                  <tr><td><br/></td></tr>
                   <tr><td class="label"> Preferable dates of workshop</td><td>(Provide three possible options in order of preference):</td></tr>
                   <tr><td class="label">1. First preference:</td></tr>
                   <tr>
@@ -47,6 +64,8 @@
                         <option value="Yes">Yes</option>
                          
                  </select></td>
+                 </tr>
+                 <tr><td><br/></td></tr>
                  <tr><td class="label"># Host Coordinator Details:</td><td></td></tr>
                  <tr>
                   <td class="label">Coordinator Name</td><td> <input type="text" name="coordinator" required></td>
@@ -63,10 +82,29 @@
                <tr>
                   <td class="label">Mobile Number</td><td> <input type="number" name="mobile" style="width: 300px;height: 24px;" required></td>
                </tr>    
- 
+               <tr><td><br/></td></tr>
                  <tr>
                   <td class="label">Have you attended workshop organized by VLA Earlier?</td><td>:
-                       <select type="text" name="attended_before" required style="background: #fff;width: 200px;height: 26px;">
+                       <select type="text" name="attended_before" onchange="vla_attended(this.value )" required style="background: #fff;width: 200px;height: 26px;">
+                          <option value="No">No</option>
+                          <option value="Yes">Yes</option>
+                           
+                   </select></td>
+               </tr>
+               
+               <tr class="attended_before invisible" ><td class="label "># Please provide details for workshop you attended: </td></tr>
+               <tr class="attended_before invisible" >
+                  <td class="label ">Workshop Name</td><td> <input type="text" name="attended_ws_name" required></td>
+               </tr>
+               <tr class="attended_before invisible">
+                  <td class="label ">Start Date</td><td>: <input type="date" name="atteded_start_date" required></td>
+               </tr>
+               <tr class="attended_before invisible">
+                  <td class="label ">End Date</td><td>: <input type="date" name="attended_end_date" required></td>
+               </tr>
+               <tr class="attended_before invisible">
+                  <td class="label ">Did you submit all the assignments?</td><td>:
+                       <select type="text" name="attended_submit_assignment"  required style="background: #fff;width: 200px;height: 26px;">
                           <option value="No">No</option>
                           <option value="Yes">Yes</option>
                            

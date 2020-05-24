@@ -67,3 +67,7 @@ textarea{ border:1px solid #ddd;width:296px;}
 .label{font-weight:bold;}
 
 #footer{margin-left:82%;margin-top:10%}
+
+.invisible{
+    display: none ;
+}
