@@ -12,6 +12,7 @@ var path = require('path');
 var customers = require('./routes/customers'); 
 var workshops= require('./routes/workshops');
 var fail=require('./routes/fail');
+var success=require('./routes/success');
 var app = express();
 
 var connection  = require('express-myconnection'); 
@@ -57,6 +58,7 @@ app.use(
 
 app.get('/', routes.index);
 app.get('/fail',fail.index);
+app.get('/success',success.index);
 //app.get('/customers', customers.list);
 app.get('/customers/add', customers.add);
 app.post('/customers/add', customers.save);
