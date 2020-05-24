@@ -11,6 +11,7 @@ var path = require('path');
 //load customers route
 var customers = require('./routes/customers'); 
 var workshops= require('./routes/workshops');
+var fail=require('./routes/fail');
 var app = express();
 
 var connection  = require('express-myconnection'); 
@@ -55,6 +56,7 @@ app.use(
 
 
 app.get('/', routes.index);
+app.get('/fail',fail.index);
 //app.get('/customers', customers.list);
 app.get('/customers/add', customers.add);
 app.post('/customers/add', customers.save);

@@ -110,8 +110,10 @@ exports.save = function(req,res){
         var query = connection.query("INSERT INTO customer set ? ",data, function(err, rows)
         {
         
-          if (err)
+          if (err){
+              res.redirect('/fail');
               console.log("Error inserting : %s ",err );
+            }
               else{
 
             /*var mailOptions = {

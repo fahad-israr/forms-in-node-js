@@ -111,8 +111,11 @@ exports.list = function(req, res){
           var query = connection.query("INSERT INTO workshop set ? ",data, function(err, rows)
           {
           
-            if (err)
+            if (err){
+              res.redirect('/fail');
                 console.log("Error inserting : %s ",err );
+                
+              }
                 else{
   
               /*var mailOptions = {
