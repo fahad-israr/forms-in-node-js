@@ -70,7 +70,7 @@ exports.save = function(req,res){
     var input = JSON.parse(JSON.stringify(req.body));
     
     req.getConnection(function (err, connection) {
-      console.log(input);
+      
         
         var data = {
 

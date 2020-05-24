@@ -77,7 +77,7 @@ exports.list = function(req, res){
       
       req.getConnection(function (err, connection) {
         if (err) throw err;
-        console.log(input)
+        
        
           
           var data = {
