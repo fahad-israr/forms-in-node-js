@@ -70,6 +70,7 @@ exports.save = function(req,res){
     var input = JSON.parse(JSON.stringify(req.body));
     
     req.getConnection(function (err, connection) {
+      console.log(input);
         
         var data = {
 
@@ -98,9 +99,13 @@ exports.save = function(req,res){
             has_computer:input.has_computer,
             has_internet:input.has_internet,
             has_webcam:input.has_webcam,
-            has_mic:input.has_mic
+            has_mic:input.has_mic,          
+            category_certificate : input.category_certificate,
+            transaction_receipt : input.transaction_receipt,
+            amount_paid : input.amount_paid
         
         };
+        console.log(data);
         
         var query = connection.query("INSERT INTO customer set ? ",data, function(err, rows)
         {
@@ -108,7 +113,7 @@ exports.save = function(req,res){
           if (err)
               console.log("Error inserting : %s ",err );
 
-            var mailOptions = {
+            /*var mailOptions = {
             from: 'fahad00cms@gmail.com',
             to: data.email,
             subject: 'Welcome to Virtual Learning Academy',
@@ -120,7 +125,7 @@ exports.save = function(req,res){
                 } else {
                   console.log('Email sent: ' + info.response);
                 }
-              });
+              });*/
 
               
           res.redirect('/');
@@ -166,7 +171,10 @@ exports.save_edit = function(req,res){
             has_computer:input.has_computer,
             has_internet:input.has_internet,
             has_webcam:input.has_webcam,
-            has_mic:input.has_mic
+            has_mic:input.has_mic,          
+            category_certificate : input.category_certificate,
+            transaction_receipt : input.transaction_receipt,
+            amount_paid : input.amount_paid
         
         };
         

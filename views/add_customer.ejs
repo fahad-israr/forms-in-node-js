@@ -1,5 +1,19 @@
 <%- include layouts/header.ejs %>
-
+<script>
+   console.log("Add Workshop Form");
+   regef=function(value){
+      console.log(value);
+      document.getElementById("amount_paid").setAttribute("value",value=="SC/ST"?"250":"500");
+      if(value=="SC/ST"){
+         console.log("final test")
+         document.getElementById("category_certificate").disabled=false;
+      }else{
+         document.getElementById("category_certificate").disabled=true;
+      }
+      
+   }
+   
+</script>
         <div class="page-data">
             
             <form method="post" action="/customers/add" onsubmit="window.scrollTo(0, 0);">
@@ -101,7 +115,7 @@
                  </tr>
 
                  <tr>
-                    <td class="label" valign="top">Category</td><td valign="top">: <select type="text" name="category" required style="background: #fff;width: 200px;height: 26px;">
+                    <td class="label" valign="top">Category</td><td valign="top">: <select type="text" name="category" id="category" onchange="regef(this.value )" required style="background: #fff;width: 200px;height: 26px;">
                         <option value="General">General</option>
                         <option value="OBC">OBC</option>
                         <option value="SC/ST">SC/ST</option>
@@ -125,6 +139,15 @@
                         <option value="no">No</option>
                 </select></td>
                 </tr>
+                <tr>
+                  <td class="label">Category certificate(only incase of SC/ST)</td><td>: <input type="file" id="category_certificate" disabled name="category_certificate" ></td>
+               </tr>
+               <tr>
+                  <td class="label">Registration Fees to be paid</td><td id="registrationfees" style="font-weight: bold;font-size: 18px;">:₹ <input name="amount_paid" id="amount_paid" value="500" readonly style="color: #000;font-size: 18px;border: none;width:12%;">/- </td>
+               </tr>
+               <tr>
+                  <td class="label">Upload Transaction Receipt</td><td>: <input type="file" name="transaction_receipt" ></td>
+               </tr>
 
 
                  <tr>
