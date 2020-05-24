@@ -40,7 +40,7 @@ exports.list = function(req, res){
 };
 
 exports.add = function(req, res){
-  res.render('add_customer',{page_title:"Workshop Registration"});
+  res.render('add_participant',{page_title:"Workshop Registration"});
 };
 
 exports.edit = function(req, res){
@@ -64,7 +64,7 @@ exports.edit = function(req, res){
     }); 
 };
 
-/*Save the customer*/
+/*Save the Participant*/
 exports.save = function(req,res){
     
     var input = JSON.parse(JSON.stringify(req.body));
@@ -188,7 +188,7 @@ exports.save_edit = function(req,res){
           if (err)
               console.log("Error Updating : %s ",err );
          
-          res.redirect('/customers');
+          res.redirect('/participants');
           
         });
     
@@ -208,7 +208,7 @@ exports.delete_customer = function(req,res){
              if(err)
                  console.log("Error deleting : %s ",err );
             
-             res.redirect('/customers');
+             res.redirect('/participants');
              
         });
         

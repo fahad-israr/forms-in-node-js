@@ -9,7 +9,7 @@ var http = require('http');
 var path = require('path');
 
 //load customers route
-var customers = require('./routes/customers'); 
+var participants = require('./routes/participants'); 
 var workshops= require('./routes/workshops');
 var fail=require('./routes/fail');
 var success=require('./routes/success');
@@ -60,8 +60,8 @@ app.get('/', routes.index);
 app.get('/fail',fail.index);
 app.get('/success',success.index);
 //app.get('/customers', customers.list);
-app.get('/customers/add', customers.add);
-app.post('/customers/add', customers.save);
+app.get('/participants/add', participants.add);
+app.post('/participants/add', participants.save);
 //app.get('/customers/delete/:id', customers.delete_customer);
 //app.get('/customers/edit/:id', customers.edit);
 //app.post('/customers/edit/:id',customers.save_edit);
