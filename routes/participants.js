@@ -29,7 +29,7 @@ exports.list = function(req, res){
                 console.log("Error Selecting : %s ",err );
                 
                 console.log(rows);
-            res.render('customers',{page_title:"Attending Workshop",data:rows});
+            res.render('participants',{page_title:"Attending Workshop",data:rows});
                 
            
          });
@@ -40,7 +40,7 @@ exports.list = function(req, res){
 };
 
 exports.add = function(req, res){
-  res.render('add_participant',{page_title:"Workshop Registration"});
+  res.render('add_participant',{page_title:"Workshop Registration",message:''});
 };
 
 exports.edit = function(req, res){

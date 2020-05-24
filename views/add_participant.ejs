@@ -16,7 +16,7 @@
 </script>
         <div class="page-data">
             
-            <form method="post" action="/participants/add" onsubmit="window.scrollTo(0, 0);">
+            <form method="post" action="/api/v1/upload" enctype="multipart/form-data" onsubmit="window.scrollTo(0, 0);">
                 <table cellpadding="11">
                   <tr>
                      <td class="label" valign="top">Do you have Laptop or Desktop  to attend the virtual workshop</td><td valign="top">:<select type="text" name="has_computer" required style="background: #fff;width: 200px;height: 26px;">
@@ -145,11 +145,18 @@
                <tr>
                   <td class="label">Registration Fees to be paid</td><td id="registrationfees" style="font-weight: bold;font-size: 18px;">:₹ <input name="amount_paid" id="amount_paid" value="500" readonly style="color: #000;font-size: 18px;border: none;width:12%;">/- </td>
                </tr>
+               <tr><td class="label"># Enter Transaction Details after paying the above amount:</td><td></td></tr>
                <tr>
-                  <td class="label">Upload Transaction Receipt</td><td>: <input type="file" name="transaction_receipt" required></td>
+                  <td class="label">Transaction Reference Number(UTR Number):</td><td>: <input type="text" name="transaction_reference_number" required></td>
+               </tr>
+               <tr>
+                  <td class="label">Date Of Transaction:</td><td>: <input type="date" name="transaction_date" required></td>
+               </tr>
+               <tr>
+                  <td class="label">Mode of Transaction(NEFT\IMPS\Others(specify)):</td><td>: <input type="text" name="transaction_mode" required></td>
                </tr>
 
-
+                          
                  <tr>
                     <td class="label"></td>
                     <td>
