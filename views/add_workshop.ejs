@@ -1,4 +1,5 @@
 <%- include layouts/header.ejs %>
+
 <script>
    vla_attended=function(value){
       console.log(value);
@@ -100,17 +101,17 @@
                
                <tr class="attended_before invisible" ><td class="label "># Please provide details for workshop you attended: </td></tr>
                <tr class="attended_before invisible" >
-                  <td class="label ">Workshop Name</td><td> <input type="text" name="attended_ws_name" required></td>
+                  <td class="label ">Workshop Name</td><td> <input type="text" name="attended_ws_name" ></td>
                </tr>
                <tr class="attended_before invisible">
-                  <td class="label ">Start Date</td><td>: <input type="date" name="atteded_start_date" required></td>
+                  <td class="label ">Start Date</td><td>: <input type="date" name="atteded_start_date" ></td>
                </tr>
                <tr class="attended_before invisible">
-                  <td class="label ">End Date</td><td>: <input type="date" name="attended_end_date" required></td>
+                  <td class="label ">End Date</td><td>: <input type="date" name="attended_end_date" ></td>
                </tr>
                <tr class="attended_before invisible">
                   <td class="label ">Did you submit all the assignments?</td><td>:
-                       <select type="text" name="attended_submit_assignment"  required style="background: #fff;width: 200px;height: 26px;">
+                       <select type="text" name="attended_submit_assignment"   style="background: #fff;width: 200px;height: 26px;">
                           <option value="No">No</option>
                           <option value="Yes">Yes</option>
                            
